@@ -3,6 +3,8 @@ package top.inick.start.controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import top.inick.start.core.ret.RetResponse;
+import top.inick.start.core.ret.RetResult;
 import top.inick.start.model.UserInfo;
 import top.inick.start.service.UserInfoService;
 
@@ -20,7 +22,9 @@ public class UserInfoController {
     }
 
     @PostMapping("/selectById")
-    public UserInfo selectById(Integer id) {
-        return userInfoService.selectById(id);
+    public RetResult<UserInfo> selectById(Integer id){
+        UserInfo userInfo = userInfoService.selectById(id);
+        return RetResponse.makeOKRsp(userInfo);
     }
+
 }
