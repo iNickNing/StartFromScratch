@@ -1,0 +1,9 @@
+{
+	"properties": [
+		{
+			"name": "demo.title",
+			"type": "java.lang.String",
+			"description": "这是我的测试标题"
+		}
+	]
+}
