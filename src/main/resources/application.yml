@@ -4,6 +4,8 @@ server:
   port: 8888
   servlet:
     context-path: /start 
+  # 开启debug输出
+  debug: true
 
 # 测试自定义属性
 demo:
@@ -12,3 +14,4 @@ demo:
   hobby:
     - 看电影
     - 游泳
+    
