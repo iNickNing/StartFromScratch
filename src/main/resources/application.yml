@@ -1,17 +1,4 @@
-# 设置端口号
-# 设置应用上下文路径
-server:
-  port: 8888
-  servlet:
-    context-path: /start 
-  # 开启debug输出
-  debug: true
-
-# 测试自定义属性
-demo:
-  code: ${random.value}
-  name: Name
-  hobby:
-    - 看电影
-    - 游泳
-    
+# 设置环境
+spring: 
+ profiles: 
+  active: dev
