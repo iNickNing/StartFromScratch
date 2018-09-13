@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
 import top.inick.start.domain.Demo;
 
 //@RestController = @Controller + @ResponseBody 默认返回的是json
 @RestController
+@Slf4j
 public class DemoController {
 	
 //	@Value("${demo.name}")//好像只能在Bean里面用这个获取
@@ -22,6 +24,7 @@ public class DemoController {
 
 	@RequestMapping(value = "/demo", method = RequestMethod.GET)
 	public Object demo() {
+		log.info("处理请求啦 demo");
 		return demo;
 		//return "Hello SpringBoot Starter " + title;
 	}

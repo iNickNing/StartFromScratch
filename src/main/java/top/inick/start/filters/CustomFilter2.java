@@ -15,8 +15,7 @@ import org.springframework.core.annotation.Order;
 import lombok.extern.slf4j.Slf4j;
 
 //注册名称为customFilter的拦截器,拦截所有的请求
-@WebFilter(filterName="customFilter2", urlPatterns= {"/*"})
-@Order(1)
+//@WebFilter(filterName="customFilter2", urlPatterns= {"/*"})
 @Slf4j
 public class CustomFilter2 implements Filter {
 
