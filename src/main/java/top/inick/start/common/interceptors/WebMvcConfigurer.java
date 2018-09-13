@@ -1,4 +1,4 @@
-package top.inick.start.interceptors;
+package top.inick.start.common.interceptors;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

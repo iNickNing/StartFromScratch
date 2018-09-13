@@ -1,4 +1,4 @@
-package top.inick.start.interceptors;
+package top.inick.start.common.interceptors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

@@ -9,9 +9,9 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 
 import lombok.extern.slf4j.Slf4j;
+import top.inick.start.common.filters.CustomFilter;
+import top.inick.start.common.filters.CustomFilter2;
 import top.inick.start.domain.Demo;
-import top.inick.start.filters.CustomFilter;
-import top.inick.start.filters.CustomFilter2;
 
 @SpringBootApplication
 @ServletComponentScan
