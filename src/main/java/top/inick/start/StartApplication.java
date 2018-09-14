@@ -2,20 +2,24 @@ package top.inick.start;
 
 import javax.servlet.Filter;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ImportResource;
 
 import lombok.extern.slf4j.Slf4j;
 import top.inick.start.common.filters.CustomFilter;
 import top.inick.start.common.filters.CustomFilter2;
-import top.inick.start.domain.Demo;
+import top.inick.start.demo.domain.Demo;
 
 @SpringBootApplication
 @ServletComponentScan
 @Slf4j
+@ImportResource(locations = {"classpath:/mybatis/spring-mybatis.xml"})
+//@MapperScan("top.inick.start.user.mapper")
 public class StartApplication {
 
 	

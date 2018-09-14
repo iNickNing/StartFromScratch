@@ -1,4 +1,4 @@
-package top.inick.start.domain;
+package top.inick.start.demo.domain;
 
 import javax.annotation.PostConstruct;
 
