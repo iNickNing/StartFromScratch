@@ -19,6 +19,7 @@ public class CommonExceptionHandler {
 	@ExceptionHandler(Exception.class)
 	@ResponseBody
 	public Map<String, Object> exceptionHandler(Exception e) {
+		e.printStackTrace();
 		log.error("Exception: {}, {}", e.getMessage(), e.getCause());
 		Map<String, Object> result = new HashMap<String, Object>();
 		result.put("respCode","500");

@@ -51,26 +51,26 @@
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <!--mybatis-->
-    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean">
+<!--     <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-		<!-- 自动扫描mapper.xml文件，支持通配符 -->
+		自动扫描mapper.xml文件，支持通配符
         <property name="mapperLocations" value="classpath:mapper/**/*.xml"/>
-		<!-- 配置文件，比如参数配置(是否启动驼峰等)、插件配置等 -->
+		配置文件，比如参数配置(是否启动驼峰等)、插件配置等
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
-		<!-- 启用别名，这样就无需写全路径类名了，具体可自行查阅资料 -->
+		启用别名，这样就无需写全路径类名了，具体可自行查阅资料
         <property name="typeAliasesPackage" value="top.inick.start.user.entity"/>
-        <!-- MP 全局配置注入 -->
+        MP 全局配置注入
         <property name="globalConfig" ref="globalConfig"/>
-    </bean>
-    <bean id="globalConfig" class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
-        <!--
+    </bean> -->
+<!--     <bean id="globalConfig" class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
+        
             AUTO->`0`("数据库ID自增")QW
              INPUT->`1`(用户输入ID")
             ID_WORKER->`2`("全局唯一ID")
             UUID->`3`("全局唯一ID")
-        -->
+       
         <property name="idType" value="2" />
-    </bean>
+    </bean> -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 	<!-- 配置mybatis 扫描mapper接口的路径, 相当于注解@MapperScan，@MapperScan("cn.lqdev.learning.springboot.chapter9.biz.dao")-->
         <property name="basePackage" value="top.inick.start.user.dao"/>
